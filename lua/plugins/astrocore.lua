@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -45,6 +43,8 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
+        cursorcolumn = true,
+        clipboard = "unnamedplus",
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -72,6 +72,19 @@ return {
           end,
           desc = "Close buffer from tabline",
         },
+        ["<C-\\>"] = { "<Cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
+        ["<C-\\>"] = { '<Cmd>execute v:count . "ToggleTerm"<CR>', desc = "Toggle terminal" },
+        ["<Leader>1"] = { function() require("astrocore.buffer").nav_to(1) end, desc = "Go to buffer 1" },
+        ["<Leader>2"] = { function() require("astrocore.buffer").nav_to(2) end, desc = "Go to buffer 2" },
+        ["<Leader>3"] = { function() require("astrocore.buffer").nav_to(3) end, desc = "Go to buffer 3" },
+        ["<Leader>4"] = { function() require("astrocore.buffer").nav_to(4) end, desc = "Go to buffer 4" },
+        ["<Leader>5"] = { function() require("astrocore.buffer").nav_to(5) end, desc = "Go to buffer 5" },
+        ["<Leader>6"] = { function() require("astrocore.buffer").nav_to(6) end, desc = "Go to buffer 6" },
+        ["<Leader>7"] = { function() require("astrocore.buffer").nav_to(7) end, desc = "Go to buffer 7" },
+        ["<Leader>8"] = { function() require("astrocore.buffer").nav_to(8) end, desc = "Go to buffer 8" },
+        ["<Leader>9"] = { function() require("astrocore.buffer").nav_to(9) end, desc = "Go to buffer 9" },
+
+
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
@@ -80,6 +93,12 @@ return {
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
       },
+      t = {
+        ["<C-\\>"] = { "<Esc><Cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
+      },
+      i = {
+        ["<C-\\>"] = { "<Cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
+      }
     },
   },
 }
