@@ -11,9 +11,15 @@ return {
       ensure_installed = {
         -- install language servers
         "lua-language-server",
+        "python-lsp-server",
+        "bash-language-server",
+        "clangd",
+        "mypy",
 
         -- install formatters
         "stylua",
+        "ruff",
+
 
         -- install debuggers
         "debugpy",
