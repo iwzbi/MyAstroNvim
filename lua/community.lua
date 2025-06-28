@@ -8,4 +8,6 @@ return {
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  -- { import = "astrocommunity.split-and-window.colorful-winsep-nvim" },
+
 }
