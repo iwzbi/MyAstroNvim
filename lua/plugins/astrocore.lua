@@ -84,7 +84,7 @@ return {
         ["<Leader>7"] = { function() require("astrocore.buffer").nav_to(7) end, desc = "Go to buffer 7" },
         ["<Leader>8"] = { function() require("astrocore.buffer").nav_to(8) end, desc = "Go to buffer 8" },
         ["<Leader>9"] = { function() require("astrocore.buffer").nav_to(9) end, desc = "Go to buffer 9" },
-        ["<C-c>"] = { function() require("swenv.api").pick_venv() end, desc = "Go to buffer 9" },
+        ["<C-c>"] = { function() require("swenv.api").pick_venv() end, desc = "Switch python environment" },
 
 
 
