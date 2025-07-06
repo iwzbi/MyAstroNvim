@@ -45,7 +45,7 @@ return {
         wrap = false, -- sets vim.opt.wrap
         cursorcolumn = true,
         clipboard = "unnamedplus",
-        autochdir = true,
+        -- autochdir = true,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
