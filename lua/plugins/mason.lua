@@ -11,7 +11,7 @@ return {
       ensure_installed = {
         -- install language servers
         "lua-language-server",
-        "python-lsp-server",
+        "pyright",
         "bash-language-server",
         "clangd",
         "mypy",
