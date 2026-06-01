@@ -11,13 +11,6 @@ return {
     opts = {},
     ft = { "markdown" },
   },
-  {
-    "iamcco/markdown-preview.nvim",
-    build = "cd app && npx --yes yarn install",
-    ft = { "markdown" },
-    cmd = { "MarkdownPreview", "MarkdownPreviewStop", "MarkdownPreviewToggle" },
-  },
-
   -- == Examples of Adding Plugins ==
 
   "andweeb/presence.nvim",
